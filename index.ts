@@ -21,3 +21,9 @@ isLarge = true
 //undefined & null (lol ugh)
 let something: null; // Can only be null 
 let another: undefined; //Can only be undefined (Honestly don't know when I'd use this)
+
+let anything: any;
+
+anything = 30;
+anything = "Matthew"
+anything = true
