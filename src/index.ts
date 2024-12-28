@@ -27,3 +27,5 @@ let anything: any;
 anything = 30;
 anything = "Matthew"
 anything = true
+
+console.log("Test1")
