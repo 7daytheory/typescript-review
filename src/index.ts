@@ -1,31 +1,27 @@
-//Setting up TS files
-let age: number = 30 // Type Inferance -> makes var type int
+//******* Arrays ***********/
 
-//age = "String" //Cannot change to a string
+let names: string[] = ['Matt', 'Marco', 'Jennifer'] //array of ONLY strings
+let numbers : number[] = [1, 2, 3] // Array of only Numbers
+let many: any[] = [1, "Name"]// Any values
 
-let firstName: string = "Matthew"
-let isFiction: boolean
-firstName = "Matt" 
-isFiction = true; 
+names.push('Ben');
+// names.push(2); // Won't work bc it's a number
 
-//Type Inferance (ugggh) - hover over vars and you can see the var tyoes
-let planet = "Earth"
-let moon = 1
-let isLarge = false
+numbers.push(2)
+//numbers.push('String') // Won't work obviously
 
-//planet = 10 // Won't work obviously
-planet = "Mars"
-moon = 3
-isLarge = true
+//***** Type Inferance with arrays ****//
 
-//undefined & null (lol ugh)
-let something: null; // Can only be null 
-let another: undefined; //Can only be undefined (Honestly don't know when I'd use this)
+let fruits = ['Apples', 'Oranges', 'Bananas'] // Type inferance makes this the same as let fruits: string[] = [];
 
-let anything: any;
+//fruits.push(1); //Type inferance will only allow strings to be pushed
+fruits.push('Mangos')
 
-anything = 30;
-anything = "Matthew"
-anything = true
+const f = fruits[3] //shows type will be a string
 
-console.log("Test1")
+let things = [1, true, 'hello'];
+const t = things[0]; // It shows it can either be a string, number of boolean
+
+//****************** Object Literals ****************//
+
+//***** Type Inferance with object literals *********//
