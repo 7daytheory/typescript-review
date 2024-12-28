@@ -1,4 +1,9 @@
 //Setting up TS files
-let age = 30 //Cannot change to a string in future if assigned an int
+let age: number = 30 // Type Inferance -> makes var type int
 
-console.log(age)
+//age = "String" //Cannot change to a string
+
+let firstName: string = "Matthew"
+let isFiction: boolean
+firstName = "Matt" 
+isFiction = true; 
