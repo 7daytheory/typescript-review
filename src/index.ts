@@ -1,31 +1,14 @@
-//Setting up TS files
-let age: number = 30 // Type Inferance -> makes var type int
+//Arrays
+let names: string[] = ['Matt', 'Marco', 'Jennifer'] //array of ONLY strings
+let numbers : number[] = [1, 2, 3] // Array of only Numbers
+let many: any[] = [1, "Name"]// Any values
 
-//age = "String" //Cannot change to a string
+names.push('Ben');
+// names.push(2); // Won't work bc it's a number
 
-let firstName: string = "Matthew"
-let isFiction: boolean
-firstName = "Matt" 
-isFiction = true; 
+numbers.push(2)
+//numbers.push('String') // Won't work obviously
 
-//Type Inferance (ugggh) - hover over vars and you can see the var tyoes
-let planet = "Earth"
-let moon = 1
-let isLarge = false
+//Type Inferance with object literals
 
-//planet = 10 // Won't work obviously
-planet = "Mars"
-moon = 3
-isLarge = true
-
-//undefined & null (lol ugh)
-let something: null; // Can only be null 
-let another: undefined; //Can only be undefined (Honestly don't know when I'd use this)
-
-let anything: any;
-
-anything = 30;
-anything = "Matthew"
-anything = true
-
-console.log("Test1")
+//Object Literals
