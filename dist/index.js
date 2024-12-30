@@ -11,3 +11,10 @@ const authorTwo = {
     name: 'John',
     avatar: '../url/link.png'
 };
+const newPost = {
+    title: 'My First Post',
+    body: 'Something body typing',
+    tags: ['gaming', 'tech'],
+    create_at: new Date(),
+    author: authorTwo
+};

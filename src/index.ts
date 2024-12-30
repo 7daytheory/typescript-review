@@ -20,3 +20,19 @@ const authorTwo: Author = {
     name: 'John',
     avatar: '../url/link.png'
 }
+
+interface Post {
+    title: string,
+    body: string,
+    tags: string[],
+    create_at: Date,
+    author: Author,
+}
+
+const newPost: Post = {
+    title: 'My First Post',
+    body: 'Something body typing',
+    tags: ['gaming', 'tech'],
+    create_at: new Date(),
+    author: authorTwo
+}
