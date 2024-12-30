@@ -17,3 +17,7 @@ title = {
 }
 
 
+/******** Any Type in Arrays ******/
+let myThings: any[] = ['hello', true, 30, null]
+
+myThings.push({id: 123}) //Can insert anything because array is any type

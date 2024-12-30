@@ -11,3 +11,6 @@ title = 25;
 title = {
     hello: 'hi',
 };
+/******** Any Type in Arrays ******/
+let myThings = ['hello', true, 30, null];
+myThings.push({ id: 123 }); //Can insert anything because array is any type
