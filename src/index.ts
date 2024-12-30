@@ -1,55 +1,50 @@
-/************
-/ Interfaces
- ***********/
+/****
+ * Type Aliases (similar to interfaces)
+ */
 
-//Several objects that will all be the same (users for example)
+//Example 1 - tuple
 
-//Pascal case for interfaces generally
-interface Author {
-    name: string,
-    avatar: string,
+type Rgb = [number, number, number]
+
+function getRandomColor(): Rgb {
+    const r = Math.floor(Math.random() * 255)
+    const g = Math.floor(Math.random() * 255)
+    const b = Math.floor(Math.random() * 255)
+
+    return [r, g, b]
 }
 
-const authorOne: Author = {
-    name: 'Matthew',
-    avatar: '../url/link.png'
+const colorOne = getRandomColor()
+const colorTwo = getRandomColor()
+console.log(colorOne, colorTwo)
+
+/* Interface version of this - you can see above is cleaner
+interface Rgb {
+  r: number;
+  g: number;
+  b: number;
 }
 
-//Useful when re-using for many cases
-const authorTwo: Author = {
-    name: 'John',
-    avatar: '../url/link.png'
-}
+function getRandomColor(): Rgb {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
 
-interface Post {
-    title: string,
-    body: string,
-    tags: string[],
-    create_at: Date,
-    author: Author,
+  return { r, g, b };
 }
-
-const newPost: Post = {
-    title: 'My First Post',
-    body: 'Something body typing',
-    tags: ['gaming', 'tech'],
-    create_at: new Date(),
-    author: authorTwo
-}
+*/
 
 /***
- * interface as a function argument type
+ * Object Literal
  */
 
-function createPost(post: Post): void {
-    console.log(`Created post ${post.title} by ${post.author.name}`)
+type User = {
+    name: string
+    score: number
 }
 
-createPost(newPost);
+const userOne: User = {name: 'Matthew', score: 50}
 
-/****
- * Interface With Arrays
- */
-
-let posts: Post[] = [];
-posts.push(newPost);
+function formatUser(user: User): void {
+    console.log(`${user.name} got a score of ${user.score}`)
+}
