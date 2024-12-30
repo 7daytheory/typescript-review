@@ -1,32 +1,25 @@
 "use strict";
-/************
-/ Interfaces
- ***********/
-const authorOne = {
-    name: 'Matthew',
-    avatar: '../url/link.png'
-};
-//Useful when re-using for many cases
-const authorTwo = {
-    name: 'John',
-    avatar: '../url/link.png'
-};
-const newPost = {
-    title: 'My First Post',
-    body: 'Something body typing',
-    tags: ['gaming', 'tech'],
-    create_at: new Date(),
-    author: authorTwo
-};
-/***
- * interface as a function argument type
- */
-function createPost(post) {
-    console.log(`Created post ${post.title} by ${post.author.name}`);
-}
-createPost(newPost);
 /****
- * Interface With Arrays
+ * Type Aliases (similar to interfaces)
  */
-let posts = [];
-posts.push(newPost);
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return [r, g, b];
+}
+/* Interface version of this - you can see above is cleaner
+interface Rgb {
+  r: number;
+  g: number;
+  b: number;
+}
+
+function getRandomColor(): Rgb {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+
+  return { r, g, b };
+}
+*/
