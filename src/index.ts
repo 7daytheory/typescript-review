@@ -2,7 +2,9 @@
 let person: [string, number, boolean] = ['Matt', 32, false]
 
 
-/******** Examples ****/
+/******** 
+ * Examples 
+ */
 
 let hsla: [number, string, string, number] // hsla Common color coding type
 hsla = [200, '100%', '50%', 1]
@@ -20,3 +22,13 @@ function useCoords(): [number, number] {
 }
 
 const [lat, long] = useCoords()
+
+/******* 
+ * Named Tuples - released in Typescript 4 so you know what the string/numbers represent (coords or name, age etc)
+ */
+
+let user: [name: string, age: number]
+
+user = ['Peach', 25]
+
+console.log(user)
