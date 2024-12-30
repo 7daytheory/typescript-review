@@ -14,6 +14,10 @@ function getRandomColor(): Rgb {
     return [r, g, b]
 }
 
+const colorOne = getRandomColor()
+const colorTwo = getRandomColor()
+console.log(colorOne, colorTwo)
+
 /* Interface version of this - you can see above is cleaner
 interface Rgb {
   r: number;
@@ -30,3 +34,17 @@ function getRandomColor(): Rgb {
 }
 */
 
+/***
+ * Object Literal
+ */
+
+type User = {
+    name: string
+    score: number
+}
+
+const userOne: User = {name: 'Matthew', score: 50}
+
+function formatUser(user: User): void {
+    console.log(`${user.name} got a score of ${user.score}`)
+}
