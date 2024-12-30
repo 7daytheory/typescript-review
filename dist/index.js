@@ -1,24 +1,23 @@
 "use strict";
-//********** any type **************/
-let myAge;
-myAge = 30;
-myAge = false;
-myAge = "55";
-//Won't cause any errors because it accepts "any" value type, but you should try to use this as less as possible
-//inerfence any type
-let title;
-title = 25;
-title = {
-    hello: 'hi',
-};
-/******** Any Type in Arrays ******/
-let myThings = ['hello', true, 30, null];
-myThings.push({ id: 123 }); //Can insert anything because array is any type
-/************ Functions and any type ********/
-function addTogether(value) {
-    return value + value;
+/******* Tuples ******/
+let person = ['Matt', 32, false];
+/********
+ * Examples
+ */
+let hsla; // hsla Common color coding type
+hsla = [200, '100%', '50%', 1];
+let xy;
+xy = [94.7, 20.1];
+function useCoords() {
+    //get coords
+    const lat = 100;
+    const long = 50;
+    return [lat, long];
 }
-//Doesn't give the variables a value type because it can be any
-const resultOne = addTogether('Hello'); // HelloHello
-const resultTwo = addTogether(2); //4
-//One of the only useful times for using any is when migrating js to ts
+const [lat, long] = useCoords();
+/*******
+ * Named Tuples - released in Typescript 4 so you know what the string/numbers represent (coords or name, age etc)
+ */
+let user;
+user = ['Peach', 25];
+console.log(user);
