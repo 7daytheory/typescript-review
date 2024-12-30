@@ -38,15 +38,15 @@ user.id = 2
 
 //***** Type Inferance with object literals *********//
 
-let person = {
+let arrayPerson = {
     name: 'Matthew', //auto assigned string
     score: 35, //auto assigned number
     isMarried: false,
 }
 
-person.name = 'Matt'
-person.score = 40
+arrayPerson.name = 'Matt'
+arrayPerson.score = 40
 // isMarried = "Yes"; Needs to be bool
-person.isMarried = true;
+arrayPerson.isMarried = true;
 
-console.log(person);
+console.log(arrayPerson);

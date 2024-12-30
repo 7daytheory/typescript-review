@@ -25,13 +25,13 @@ user.firstName = 'Matt';
 user.id = 2;
 //user.email = "myemail@gmail.com" // Won't add as there is no email value
 //***** Type Inferance with object literals *********//
-let person = {
+let arrayPerson = {
     name: 'Matthew', //auto assigned string
     score: 35, //auto assigned number
     isMarried: false,
 };
-person.name = 'Matt';
-person.score = 40;
+arrayPerson.name = 'Matt';
+arrayPerson.score = 40;
 // isMarried = "Yes"; Needs to be bool
-person.isMarried = true;
-console.log(person);
+arrayPerson.isMarried = true;
+console.log(arrayPerson);
