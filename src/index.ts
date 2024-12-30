@@ -36,3 +36,20 @@ const newPost: Post = {
     create_at: new Date(),
     author: authorTwo
 }
+
+/***
+ * interface as a function argument type
+ */
+
+function createPost(post: Post): void {
+    console.log(`Created post ${post.title} by ${post.author.name}`)
+}
+
+createPost(newPost);
+
+/****
+ * Interface With Arrays
+ */
+
+let posts: Post[] = [];
+posts.push(newPost);
