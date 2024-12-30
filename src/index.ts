@@ -28,3 +28,12 @@ function addAllNumbers(items: number[]): void {
 }
 
 addAllNumbers([1,5, 6, 7, 11, 34, 3, 11]);
+
+// ******** Return Type Inference ******///////
+
+function formatGreeting(name: string, greeting: string) {
+    return `${greeting}, ${name}`
+}
+
+//No return type addeed but it infers the return type will be string
+const result = formatGreeting('Matthew', 'Hello');
