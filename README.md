@@ -1,5 +1,5 @@
 ﻿# TypeScript Overview
-Just going over some of the basics of Typescript. Mostly just statically typed javascript that needs to be compiled into javascript with some more handy features like interfaces, enums, type aliases etc
+Just reviewing some of the basics of Typescript as it's been a little while. Mostly just statically typed javascript that needs to be compiled into javascript with some more handy features like interfaces, enums, type aliases etc
 
 ## What is TypeScript?
 TypeScript is a strongly typed superset of JavaScript that compiles to plain JavaScript. It adds static typing and other features to make your code more robust and maintainable.
