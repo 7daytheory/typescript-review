@@ -1,50 +1,34 @@
-/****
- * Type Aliases (similar to interfaces)
- */
+//***
+// ******** Union Types
+// */
 
-//Example 1 - tuple
+let someId: number | string //Allows multiple types - not any but a number or a string in this secnario
 
-type Rgb = [number, number, number]
+someId = 2
+someId = "1"
 
-function getRandomColor(): Rgb {
-    const r = Math.floor(Math.random() * 255)
-    const g = Math.floor(Math.random() * 255)
-    const b = Math.floor(Math.random() * 255)
+let loginEmail: string | null = null
 
-    return [r, g, b]
+loginEmail = "matthew@gmail.com"
+loginEmail = null // User logged out perhaps
+
+//Setup Union Type in advange
+type Id = number | string
+let anotherId : Id
+
+anotherId = "12agagtAeg"
+anotherId = 3
+
+//***Common Union Type Pitfall ****/
+// Watch out for this
+
+function swapIdType(id: Id): Id {
+    //Can only use props and method common to bot number and string types
+    // parseInt(id) -> not allowed for example
+ 
+    parseInt(id) // Even if it's a string - because it COULD be a number it won't allow it
+
+    return id
 }
 
-const colorOne = getRandomColor()
-const colorTwo = getRandomColor()
-console.log(colorOne, colorTwo)
-
-/* Interface version of this - you can see above is cleaner
-interface Rgb {
-  r: number;
-  g: number;
-  b: number;
-}
-
-function getRandomColor(): Rgb {
-  const r = Math.floor(Math.random() * 255);
-  const g = Math.floor(Math.random() * 255);
-  const b = Math.floor(Math.random() * 255);
-
-  return { r, g, b };
-}
-*/
-
-/***
- * Object Literal
- */
-
-type User = {
-    name: string
-    score: number
-}
-
-const userOne: User = {name: 'Matthew', score: 50}
-
-function formatUser(user: User): void {
-    console.log(`${user.name} got a score of ${user.score}`)
-}
+swapIdType("5");
