@@ -52,3 +52,33 @@ function swapIdType(id: Id): void {
 
 swapIdType(5)
 swapIdType("5")
+
+
+//********
+// Tagged Interfaces
+// (Basically just adding a value inside the object/interface etc to identify type)
+// */
+
+interface NewUser {
+    type: 'newuser'
+    username: string
+    email: string
+    id: Id
+}
+
+interface Person {
+    type: 'person'
+    firstName: string
+    age: number
+    id: Id
+}
+
+function logDetails(value: NewUser | Person): void {
+    if (value.type === 'newuser') {
+        //Typescript knows it's dealing with NewUser Interface
+        console.log(value.email, value.username)
+    } else if(value.type === 'person') {
+        //Typescript knows it's dealing with Person Interface
+        console.log(value.firstName, value.age)
+    }
+}
